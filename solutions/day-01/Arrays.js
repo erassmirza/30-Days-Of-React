@@ -1,3 +1,6 @@
+import { countries } from './countries.js';
+import { webTechs } from './web_techs.js';
+
 // Level 1
 
 const countriess = [
@@ -71,7 +74,7 @@ console.log(itCompanies.slice(0,itCompanies.length-1).toString()+' and '+itCompa
 
 // 13
 let company = 'Google'
-existComapny = itCompanies.includes(company)
+let existComapny = itCompanies.includes(company)
 existComapny == true
   ? console.log(company)
   : console.log('Comapny does not exist')
@@ -111,3 +114,45 @@ console.log(itCompanies)
 console.log(itCompanies.splice(0,itCompanies.length))
 console.log(itCompanies)
 
+// Level 2
+
+// 2
+let text =
+  'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+let words = text.replace(/[.,]/g,'').split(' ')
+console.log(words)
+console.log(words.length)
+
+// 3
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+console.log(shoppingCart)
+shoppingCart.unshift('Meat')
+console.log(shoppingCart)
+shoppingCart.push('Sugar')
+console.log(shoppingCart)
+shoppingCart.splice(shoppingCart.length-2,1)
+console.log(shoppingCart)
+shoppingCart.splice(shoppingCart.length-2,1,'Green Tea')
+console.log(shoppingCart)
+
+// 4
+let coun = 'Ethiopia'
+let checkCoun = countries.includes(coun)
+checkCoun == true
+  ? console.log(coun.toUpperCase())
+  : console.log(countries.push(coun))
+
+// 5
+let webT = 'Sass'
+let checkwebT = webTechs.includes(webT)
+// console.log(checkwebT)
+checkwebT == true
+  ? console.log(`${webT} is a CSS preprocess`)
+  : webTechs.push(webT)
+console.log(webTechs)
+
+// 6
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node', 'Express', 'MongoDB']
+const fullStack = frontEnd.concat(backEnd)
+console.log(fullStack)
